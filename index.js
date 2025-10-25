@@ -80,10 +80,10 @@ function findInterfacesDarwin (targets) {
     }
 
     const it = {
-      address: address,
+      address,
       currentAddress: getInterfaceMAC(device),
-      device: device,
-      port: port
+      device,
+      port
     }
 
     if (targets.length === 0) {
@@ -139,10 +139,10 @@ function findInterfacesLinux (targets) {
     }
 
     const it = {
-      address: address,
+      address,
       currentAddress: getInterfaceMAC(device),
-      device: device,
-      port: port
+      device,
+      port
     }
 
     if (targets.length === 0) {
@@ -350,7 +350,7 @@ function tryWindowsKey (key, device, mac) {
 
   const networkAdapterKeyPath = new Winreg({
     hive: Winreg.HKLM,
-    key: key
+    key
   })
 
   // we need to format the MAC a bit for Windows
